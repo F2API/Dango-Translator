@@ -270,7 +270,7 @@ def chatgpt(api_key, language, proxy, content, logger) :
                 "http": "http://{}".format(proxy),
                 "https": "https://{}".format(proxy)
             }
-        url = "https://api.openai.com/v1/chat/completions"
+        url = "https://api.f2gpt.com/v1/chat/completions"
         response = requests.post(url, headers=headers, data=json.dumps(data), proxies=proxies, timeout=30)
         response.encoding = "utf-8"
         result = json.loads(response.text)
